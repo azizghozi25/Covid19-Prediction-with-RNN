@@ -1,5 +1,5 @@
 # Covid19-Prediction-with-RNN
-### This notebook is a big assignment of Komputasi Matematika 3 when I were studying at mathematics department of Institut Teknologi Sumatera. I share this notebook to public in order to share my understanding and obtain if any feedback in order to improve my skills.
+This notebook is a big assignment of Komputasi Matematika 3 when I were studying at mathematics department of Institut Teknologi Sumatera. I share this notebook to public in order to share my understanding and obtain if any feedback in order to improve my skills.
 
 So, I assigned by my lecturer to predict a case with one of deep learning methods that we have learned before. I have chosen 3 datas about Covid-19 in Lampung Province, those are active case, recovered case, and death case. Besides that, i have chosen Recurrent Neural Network (RNN) Method because RNN is a fprm of artificial neural network architecture designed specifically for processing time series data. RNN can store memory (feedback loop) so that it can recognize data patterns well and then use then to make accurate prediction.
 
@@ -14,8 +14,8 @@ I have done in this notebook such as:
 ### Task in the assignment
 - [Step 1 - Loading Data](#step-1---loading-data)
 - [Step 2 - Pre-processing](#step-2---pre-processing)
-- [Step 3 - Multi-layer Perceptron](#step-3---multi-layer-perceptron)
-- [Step 4 - Optimizer](#step-4---optimizer)
+- [Step 3 - Preparing Model](#step-3---preparing-model)
+- [Step 4 - Data Normalization](#step-4---data-normalization)
 - [Step 5 - Training the model](#step-5---training-the-model)
 - [Step 6 - Prediction](#step-6---predictions)
 
@@ -25,7 +25,7 @@ In this section, you will unzip the data from google drive and load the data int
 from google_drive_downloader import GoogleDriveDownloader as gdd
 ```
 
-### Step 2 - Pre-Processing
+### Step 2 - Pre-processing
 In this section, you have to set the pixel into 256 256, covert_to_tensor, reshape and normalize it.
 - convert to tensor `tf.convert_to_tensort(data_test, np.float32)`
 - reshape `tf.reshape(data_test_tf, [910, 256, 256, 3])`
@@ -35,15 +35,14 @@ To load the training data, I use the Image Data Generator
 ```
 from keras.preprocessing.image import ImageDataGenerator
 ```
-<img src="image/farfalla.png" width="300" >
 
-### Step 3 - Multi-layer Perceptron
+### Step 3 - Preparing Model
 In this section, you have to build your own model version to predict the data. I have build 3 hidden layers such as
 - First hidden layer, I use 512 perceptrons and relu activation
 - Second hidden layer, I use 256 perceptrons and relu activation
 - Third hidden layer, I use 128 perceptrons and relu activation
 
-### Step 4 - Optimizer
+### Step 4 - Data Normalization
 In this section, you have to create your own optimizer.
 Here I use `adam` for simple CNN model and `SGD` for the ResNet50 Model
 
