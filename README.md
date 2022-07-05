@@ -5,10 +5,10 @@ So, I assigned by my lecturer to predict a case with one of deep learning method
 
 I have done in this notebook such as:
 - Loading the data and save it into appropriate variables
-- Converting the array of data into tensor in four-dimensional array
+- Converting the array of data into xTrain, yTrain, xTest and yTest
 - Normalizing the data from 0 to 1 to achieve consistency in dynamic range for a set of data, signals or images to avoid mental distraction and reduce the data redundancy
-- Building the simple CNN model to predict the test_data using Adam as an optimizer
-- Building the CNN model architecture customizing the ResNet50 model and get 99.94% 
+- Building the simple RNN model to predict the test_data using Adam as an optimizer
+- Building the RNN model architecture and get 99.9568357% for data train and 98.5259620% for data test
 - Using EarlyStopping to minimize the overfitting and check the interactive dashboard from Tensorboard to see the epoch_loss and epoch_accuracy
 
 ### Task in the assignment
